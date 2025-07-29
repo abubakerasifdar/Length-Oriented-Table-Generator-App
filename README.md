@@ -1,2 +1,2 @@
-# displays-product-of-all-odd-numbers
-A JavaScript tool that calculates the product of all odd numbers in a given range or array, with step-by-step computation.
+# Length-Oriented-Table-Generator-App
+A JavaScript app that creates responsive tables optimized for content length, with dynamic column sizing and word-wrap control.
