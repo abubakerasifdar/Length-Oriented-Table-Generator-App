@@ -2,26 +2,17 @@
 document.addEventListener("keydown", (e) => {
     if (e.key == "Enter") {
         myFunction();
-
     }
 })
 function myFunction() {
     let input = Number(document.getElementById('input').value);
+    let length = Number(document.getElementById('input2').value);
     let result = "";
-    let count = 0;
-    let oddProduct = 1;
-    var oddNumber = '';
-    for (let i = 0; i <= input; i++) {
-        count = `${count + i},`;
+    let count = '';
+    for (let i = 1; i <= length; i++) {
+        count += `${input} x ${i} = ${input * i} <br>`;
     }
-    let countarray = count.split(',');
-    let len = countarray.length-1
-    for (let i = 0; i < len; i++) {
-         if (countarray[i] != 0 && countarray[i] % 2 != 0) { oddNumber = oddNumber + Number(countarray[i]) + "<br>";
-            oddProduct = oddProduct * countarray[i];
-        }
-    }
-    result = `You Entered:  ${input} <br> & In this odd numbers are: <br>  ${oddNumber} <br>& Their Product is ${oddProduct}`;
+     result = count;
     document.getElementById('output').style.display = "flex";
     document.getElementById('output').innerHTML = result;
 }
